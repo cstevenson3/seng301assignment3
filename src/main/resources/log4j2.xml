@@ -1,0 +1,54 @@
+<!--
+  ~ Copyright (c) 2020. University of Canterbury
+  ~
+  ~ This file is part of SENG301 lab material.
+  ~
+  ~  The lab material is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU Lesser General Public License as published
+  ~  by the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  The lab material is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU Lesser General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU Lesser General Public License
+  ~  along with this material.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<Configuration status="info">
+    <!-- see https://logging.apache.org/log4j/2.x/manual/appenders.html -->
+    <Appenders>
+        <!-- the following defines a log file where application log will be output, it "rolls over" multiple files -->    
+        <RollingFile name="applog" fileName="log/app.log"
+                     filePattern="log/app-%d{yyyy-MM-dd}-%i.log" >
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="1950KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1"/>
+        </RollingFile>
+        <!-- the following defines a logger that will output to stdout -->
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- send app-related log statements (i.e. every logger with names starting with "uc.seng301" to both
+            app log file and console appenders (with different log levels) -->
+        <Logger name="uc.seng301">
+            <AppenderRef ref="applog" level="DEBUG"/>
+            <!-- stdout appender commented out for CLI application -->
+            <!-- AppenderRef ref="stdout" level="ALL"/ -->
+        </Logger>
+        <!--  Alternatively, all declared loggers (even library ones) can be passed to "parent" root logger that
+            will collect all log statements that are not redirected to other appenders (as both hibernate ones above)
+            and all forwarded ones as uc.seng301 logger above that is also sent to this root logger.
+            You can also see that uc.seng301 log debug statements wil printed here while not printed in applog file. -->
+        <Root level="all" additivity="false">
+            <AppenderRef ref="allother"/>
+        </Root>
+    </Loggers>
+</Configuration>

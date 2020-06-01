@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // unit testing (aka SENG201)
+    testImplementation 'junit:junit:4.12'
+
+    // acceptance testing (SENG301 lab 4)
+    testImplementation 'io.cucumber:cucumber-java:5.4.0'
+    testImplementation 'io.cucumber:cucumber-junit:5.4.0'
+
+    // acceptance testing (SENG301 lab 5)
+    implementation group: 'org.mockito', name: 'mockito-core', version: '3.2.0'
+
+    // logging facility (SENG301 lecture 8)
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.1'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+application {
+    // Define the main class for the application.
+    mainClassName = 'uc.seng301.asg3.App'
+}
+
+test {
+    useJUnit()
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+run{
+    // this is needed if you want to start your main class with gradle run
+    // you may also pass the --console=PLAIN option to disable the green progress bar
+    // e.g., gradle --console=PLAIN run
+    standardInput = System.in
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources', '--snippets', 'camelcase']
+        }
+    }
+}
