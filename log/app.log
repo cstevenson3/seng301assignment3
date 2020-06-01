@@ -1,0 +1,51 @@
+17:26:27.188 [main] DEBUG uc.seng301.asg3.order.Counter - new order placed
+17:26:27.193 [Thread-1] DEBUG uc.seng301.asg3.order.Counter - picked order
+17:26:27.193 [Thread-1] INFO  uc.seng301.asg3.order.Chocolatier - Starting to execute order
+17:26:27.194 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+17:26:27.202 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type MILK without alcohol
+17:26:27.204 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+17:26:27.205 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+17:26:28.583 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+17:26:28.584 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+17:26:28.703 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+17:26:28.704 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type MILK without alcohol
+17:26:28.873 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+17:26:28.874 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+17:26:29.145 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a MILK hollow egg without alcohol
+17:26:29.145 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+17:26:29.196 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+17:26:29.414 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a MILK hollow egg without alcohol
+17:26:29.414 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type MILK without alcohol
+17:26:30.175 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+17:26:30.175 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type MILK without alcohol
+17:26:30.180 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+17:26:30.181 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+17:26:30.247 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+17:26:30.248 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.248 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.248 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.248 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.248 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.248 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.249 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.249 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.249 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.249 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.249 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.249 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.249 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.250 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.250 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.250 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:30.948 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a MILK hollow egg without alcohol
+17:26:30.948 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:30.948 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:31.201 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 9 eggs
+17:26:31.413 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a MILK hollow egg without alcohol
+17:26:31.413 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+17:26:31.413 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+17:26:33.202 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 10 eggs
+17:26:33.203 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 10 eggs
+17:26:57.211 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - exiting
+17:26:57.211 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 10 eggs
+17:26:57.212 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 10 eggs
