@@ -73,4 +73,12 @@ public class StuffedEggFactory implements ChocolateEggFactory {
     }
     return filling;
   }
+  
+  /**
+   * Get the list of fillings this factory is capable of using
+   * @return the list of fillings
+   */
+  public List<Filling> getFillings() {
+    return fillings;
+  }
 }

@@ -19,6 +19,9 @@
 
 package uc.seng301.asg3.order;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -31,6 +34,7 @@ import uc.seng301.asg3.egg.ChocolateEggFactory;
 import uc.seng301.asg3.egg.ChocolateType;
 import uc.seng301.asg3.egg.HollowEggFactory;
 import uc.seng301.asg3.egg.StuffedEggFactory;
+import uc.seng301.asg3.ingredient.Filling;
 import uc.seng301.asg3.packaging.Packaging;
 import uc.seng301.asg3.packaging.PackagingType;
 
@@ -75,13 +79,76 @@ public class PreparingOrder extends Order {
     if (PackagingType.isHollowEggPackaging(packagingType)) {
       packaging.addChocolateEgg(produceEgg(hollowEggFactory, randomChocolateType(), false));
     }
+    
+    // generate balancing requirements
+    ArrayList<ChocolateType> chocolateTypesToUse = new ArrayList<ChocolateType>();
+    ChocolateType[] availableChocolateTypes = ChocolateType.values();
+    int quantityRemaining = quantity;
+    int numChocTypesRemaining = availableChocolateTypes.length;
+    for(int c = 0; c < availableChocolateTypes.length; c++) {
+      float approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
+      int chocTypeQuantity = Math.round(approxChocTypeQuantity);
+      // add this many to chocolateTypesToUse
+      for(int ct = 0; ct < chocTypeQuantity; ct++) {
+        chocolateTypesToUse.add(availableChocolateTypes[c]);
+      }
+      quantityRemaining -= chocTypeQuantity;
+      numChocTypesRemaining -= 1;
+    }
+    
+    ArrayList<Filling> fillingsToUse = new ArrayList<Filling>();
+    List<Filling> unfilteredAvailableFillings = stuffedEggFactory.getFillings();
+    List<Filling> availableFillings = new ArrayList<Filling>();
+    if(!containsAlcohol) {
+      for(Filling fill : unfilteredAvailableFillings) {
+        if(!(fill.containsAlcohol())) {
+          availableFillings.add(fill);
+        }
+      }
+    }
+    availableFillings.add(null); // null will represent hollow eggs
+    quantityRemaining = quantity;
+    int numFillingsRemaining = availableFillings.size();
+    for(int f = 0; f < availableFillings.size(); f++) {
+      float approxFillingQuantity = ((float)quantityRemaining) / ((float)numFillingsRemaining);
+      int fillingQuantity = Math.round(approxFillingQuantity);
+      // add this many to fillingsToUse
+      for(int ct = 0; ct < fillingQuantity; ct++) {
+        fillingsToUse.add(availableFillings.get(f));
+      }
+      quantityRemaining -= fillingQuantity;
+      numFillingsRemaining -= 1;
+    }
+    
+    // shuffle so different choc types end up with different fillings
+    Collections.shuffle(chocolateTypesToUse);
+    Collections.shuffle(fillingsToUse);
 
     for (int i = 0; i < quantity; i++) {
+      ChocolateType chocType = chocolateTypesToUse.get(i);
+      Filling filling = fillingsToUse.get(i);
+      boolean hasAlcohol;
+      
+      ChocolateEggFactory eggFactory;
+      if(filling == null) {
+        // hollow egg
+        hasAlcohol = false;
+        eggFactory = hollowEggFactory;
+      } else {
+        // stuffed egg
+        hasAlcohol = filling.containsAlcohol();
+        ArrayList<Filling> specificFilling = new ArrayList<Filling>();
+        specificFilling.add(filling);
+        // create a StuffedEggFactory only capable of producing this filling
+        StuffedEggFactory specificFillingFactory = new StuffedEggFactory(specificFilling);
+        eggFactory = specificFillingFactory;
+      }
+      
       // CompletableFutures are sorts of threads that can be easily created on the fly to process
       // long running tasks, as the produceEgg method. We also pass the executor where we created
       // a pool of threads with a given size of 3
       CompletableFuture.supplyAsync(() ->
-          produceEgg(randomFactory(stuffed), randomChocolateType(), withAlcohol(containsAlcohol)), executor)
+          produceEgg(eggFactory, chocType, hasAlcohol), executor)
           // and we can be called-back when the process ran inside a CompletableFuture finishes and
           // return some result when want to process, like here the produced eggs
           .thenAcceptAsync(egg -> {
