@@ -20,15 +20,22 @@
 package uc.seng301.asg3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+
+import uc.seng301.asg3.egg.ChocolateEgg;
 import uc.seng301.asg3.egg.ChocolateType;
 import uc.seng301.asg3.egg.HollowEggFactory;
+import uc.seng301.asg3.egg.StuffedChocolateEgg;
 import uc.seng301.asg3.egg.StuffedEggFactory;
+import uc.seng301.asg3.ingredient.Filling;
 import uc.seng301.asg3.order.Chocolatier;
 import uc.seng301.asg3.order.Counter;
 import uc.seng301.asg3.order.PreparingOrder;
+import uc.seng301.asg3.packaging.Packaging;
 import uc.seng301.asg3.packaging.PackagingType;
 
 /**
@@ -50,6 +57,43 @@ public class App {
 
   private App() {
     cli = new Scanner(System.in);
+  }
+  
+  /**
+   * Are identical eggs spread away from each other?
+   * @param packaging the packaging to check
+   * @return true if identical eggs are not next to each other
+   */
+  static boolean isPackageDistributedSuitably(Packaging packaging) {
+    List<ChocolateEgg> eggs;
+    if(PackagingType.isHollowEggPackaging(packaging.getPackagingType())) {
+      eggs = packaging.getEggs().get(0).getContent();
+    } else {
+      eggs = packaging.getEggs();
+    }
+    
+    for(int i = 0; i < eggs.size() - 1; i++) {
+      ChocolateEgg egg1 = eggs.get(i);
+      ChocolateEgg egg2 = eggs.get(i + 1);
+      boolean sameChocolateType = egg1.getChocolateType() == egg2.getChocolateType();
+      Filling filling1;
+      if(egg1 instanceof StuffedChocolateEgg) {
+        filling1 = ((StuffedChocolateEgg) egg1).getFilling();
+      } else {
+        filling1 = null;
+      }
+      Filling filling2;
+      if(egg2 instanceof StuffedChocolateEgg) {
+        filling2 = ((StuffedChocolateEgg) egg2).getFilling();
+      } else {
+        filling2 = null;
+      }
+      boolean sameFilling = filling1 == filling2;
+      if(sameChocolateType && sameFilling) {
+        return false;
+      }
+    }
+    return true;
   }
 
   /**
@@ -98,6 +142,15 @@ public class App {
     } catch (InterruptedException e) {
       logger.error("Interrupted while busy waiting...", e);
     }
+    
+    while(!isPackageDistributedSuitably(order.getPackaging())) {
+      if(PackagingType.isHollowEggPackaging(order.getPackaging().getPackagingType())) {
+        Collections.shuffle(order.getPackaging().getEggs().get(0).getContent());
+      } else {
+        Collections.shuffle(order.getPackaging().getEggs());
+      }
+    }
+    
 
     System.out.println(order.getPackaging());
     counter.stop();
