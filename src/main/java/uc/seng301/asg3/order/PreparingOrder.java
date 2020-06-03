@@ -116,19 +116,24 @@ public class PreparingOrder extends Order {
     ArrayList<Filling> fillingsToUse = new ArrayList<Filling>();
     List<Filling> unfilteredAvailableFillings = stuffedEggFactory.getFillings();
     List<Filling> availableFillings = new ArrayList<Filling>();
-    if(!containsAlcohol) {
-      for(Filling fill : unfilteredAvailableFillings) {
-        if(!(fill.containsAlcohol())) {
-          availableFillings.add(fill);
-        }
+    availableFillings.add(null); // null will represent hollow eggs
+    for(Filling fill : unfilteredAvailableFillings) {
+      if(!(fill.containsAlcohol() && !containsAlcohol)) {
+        availableFillings.add(fill);
       }
     }
-    availableFillings.add(null); // null will represent hollow eggs
     quantityRemaining = quantity;
     int numFillingsRemaining = availableFillings.size();
     for(int f = 0; f < availableFillings.size(); f++) {
-      float approxFillingQuantity = ((float)quantityRemaining) / ((float)numFillingsRemaining);
-      int fillingQuantity = Math.round(approxFillingQuantity);
+      float approxFillingQuantity;
+      int fillingQuantity;
+      if(PackagingType.isHollowEggPackaging(packagingType) && availableFillings.get(f) == null) {
+        approxFillingQuantity = ((float)quantityRemaining + 1) * 0.3F - 1;
+        fillingQuantity = (int)Math.floor(approxFillingQuantity);
+      } else {
+        approxFillingQuantity = ((float)(quantityRemaining)) / ((float)numFillingsRemaining);
+        fillingQuantity = Math.round(approxFillingQuantity);
+      }
       // add this many to fillingsToUse
       for(int ct = 0; ct < fillingQuantity; ct++) {
         fillingsToUse.add(availableFillings.get(f));
