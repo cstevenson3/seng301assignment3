@@ -82,15 +82,32 @@ public class PreparingOrder extends Order {
     
     // generate balancing requirements
     ArrayList<ChocolateType> chocolateTypesToUse = new ArrayList<ChocolateType>();
-    ChocolateType[] availableChocolateTypes = ChocolateType.values();
+    ChocolateType[] availableChocolateTypesUnfiltered = ChocolateType.values();
+    ArrayList<ChocolateType> availableChocolateTypes = new ArrayList<ChocolateType>();
+    
+    // put crunchy first
+    availableChocolateTypes.add(ChocolateType.CRUNCHY);
+    for(int ctu = 0; ctu < availableChocolateTypesUnfiltered.length; ctu++) {
+      if(availableChocolateTypesUnfiltered[ctu] != ChocolateType.CRUNCHY) {
+        availableChocolateTypes.add(availableChocolateTypesUnfiltered[ctu]);
+      }
+    }
     int quantityRemaining = quantity;
-    int numChocTypesRemaining = availableChocolateTypes.length;
-    for(int c = 0; c < availableChocolateTypes.length; c++) {
-      float approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
-      int chocTypeQuantity = Math.round(approxChocTypeQuantity);
+    int numChocTypesRemaining = availableChocolateTypes.size();
+    for(int c = 0; c < availableChocolateTypes.size(); c++) {
+      float approxChocTypeQuantity;
+      int chocTypeQuantity;
+      if(availableChocolateTypes.get(c) == ChocolateType.CRUNCHY) {
+        approxChocTypeQuantity = ((float)quantityRemaining) * 0.1F;
+        chocTypeQuantity = (int) Math.floor(approxChocTypeQuantity);
+      } else {
+        approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
+        chocTypeQuantity = Math.round(approxChocTypeQuantity);
+      }
+      
       // add this many to chocolateTypesToUse
       for(int ct = 0; ct < chocTypeQuantity; ct++) {
-        chocolateTypesToUse.add(availableChocolateTypes[c]);
+        chocolateTypesToUse.add(availableChocolateTypes.get(c));
       }
       quantityRemaining -= chocTypeQuantity;
       numChocTypesRemaining -= 1;

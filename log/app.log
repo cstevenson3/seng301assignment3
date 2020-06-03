@@ -6509,3 +6509,727 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 04:13:07.279 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
 04:13:07.505 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 5 eggs
 04:13:07.506 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 5 eggs
+13:24:38.407 [main] DEBUG uc.seng301.asg3.order.Counter - new order placed
+13:24:38.412 [Thread-1] DEBUG uc.seng301.asg3.order.Counter - picked order
+13:24:38.413 [Thread-1] INFO  uc.seng301.asg3.order.Chocolatier - Starting to execute order
+13:24:38.414 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:38.427 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type WHITE without alcohol
+13:24:38.428 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:24:38.428 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:24:39.794 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a WHITE hollow egg without alcohol
+13:24:39.794 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type CRUNCHY without alcohol
+13:24:39.907 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:24:39.908 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:24:40.081 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:24:40.081 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:24:40.208 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:24:40.208 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type CRUNCHY without alcohol
+13:24:40.418 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:40.608 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a CRUNCHY stuffed egg without alcohol
+13:24:40.609 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:24:40.858 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a CRUNCHY hollow egg without alcohol
+13:24:40.859 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:24:41.039 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:24:41.040 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type DARK without alcohol
+13:24:41.441 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:24:41.441 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:24:41.715 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:24:41.716 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:24:42.419 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:42.453 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:24:42.453 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type WHITE without alcohol
+13:24:42.536 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a WHITE hollow egg without alcohol
+13:24:42.536 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:24:42.554 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:24:42.555 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type WHITE without alcohol
+13:24:42.722 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:24:42.722 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type MILK without alcohol
+13:24:42.800 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a DARK hollow egg without alcohol
+13:24:42.801 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type CRUNCHY without alcohol
+13:24:43.110 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a MILK hollow egg without alcohol
+13:24:43.111 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:24:43.224 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a WHITE hollow egg without alcohol
+13:24:43.224 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type CRUNCHY without alcohol
+13:24:44.193 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a CRUNCHY stuffed egg without alcohol
+13:24:44.194 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type CRUNCHY without alcohol
+13:24:44.240 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a CRUNCHY stuffed egg without alcohol
+13:24:44.240 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.241 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:24:44.241 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.241 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:24:44.241 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.241 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:24:44.242 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.242 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:24:44.242 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.242 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:24:44.242 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.242 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:24:44.242 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.242 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:24:44.243 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.243 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:24:44.243 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.243 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:24:44.243 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.243 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:24:44.243 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.244 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:24:44.244 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.244 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:24:44.244 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.244 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:24:44.244 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.244 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:24:44.245 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.245 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:24:44.245 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.245 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:24:44.245 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.246 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:24:44.246 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.246 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:24:44.423 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 18 eggs
+13:24:44.789 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:24:44.790 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.790 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:24:44.819 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a CRUNCHY stuffed egg without alcohol
+13:24:44.820 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:24:44.820 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:24:46.429 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:24:46.429 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:25:08.435 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - exiting
+13:25:08.436 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:25:08.436 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:25:52.249 [main] DEBUG uc.seng301.asg3.order.Counter - new order placed
+13:25:52.252 [Thread-1] DEBUG uc.seng301.asg3.order.Counter - picked order
+13:25:52.253 [Thread-1] INFO  uc.seng301.asg3.order.Chocolatier - Starting to execute order
+13:25:52.254 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:52.263 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type DARK without alcohol
+13:25:52.267 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:25:52.267 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:25:52.825 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:25:52.826 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type DARK without alcohol
+13:25:53.511 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a DARK hollow egg without alcohol
+13:25:53.512 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:25:53.780 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:25:53.781 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:25:54.258 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:54.331 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a DARK hollow egg without alcohol
+13:25:54.331 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:25:55.323 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:25:55.323 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:25:55.385 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:25:55.385 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type MILK without alcohol
+13:25:55.871 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:25:55.871 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:25:56.070 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a MILK hollow egg without alcohol
+13:25:56.071 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:25:56.259 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:56.566 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:25:56.566 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:25:56.573 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:25:56.573 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:25:56.862 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:25:56.863 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type WHITE without alcohol
+13:25:57.062 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:25:57.062 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:25:57.158 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:25:57.159 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.159 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:25:57.159 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.159 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:25:57.160 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.160 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:25:57.160 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.160 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:25:57.161 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.161 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:25:57.161 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.161 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:25:57.161 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.162 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:25:57.162 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.162 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:25:57.162 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.162 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:25:57.163 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.163 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:25:57.163 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.163 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:25:57.163 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.163 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:25:57.163 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.163 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:25:57.429 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:25:57.430 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:57.430 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:25:58.261 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 14 eggs
+13:25:58.760 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a WHITE hollow egg without alcohol
+13:25:58.761 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:25:58.761 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:26:00.265 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:02.270 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:04.275 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:06.281 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:08.284 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:10.286 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:12.287 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:14.293 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:16.298 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:18.303 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:20.305 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:22.306 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:24.306 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:26.309 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:28.313 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:30.317 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:32.321 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:34.322 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:36.327 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:38.330 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:40.331 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:42.333 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:44.337 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:46.339 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:48.344 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:50.350 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:52.355 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:54.361 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:56.363 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:58.368 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:00.373 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:02.377 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:04.377 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:06.382 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:21:59.626 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:01.628 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:03.633 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:05.637 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:07.642 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:09.645 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:11.648 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:13.650 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:15.654 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:17.657 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:19.659 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:21.665 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:23.669 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:25.674 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:27.679 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:29.686 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:31.690 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:33.692 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:35.697 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:37.702 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:39.705 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:41.710 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:43.710 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:45.713 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:47.716 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:49.721 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:51.727 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:53.728 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:55.733 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:57.735 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:22:59.738 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:01.739 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:03.744 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:05.747 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:07.749 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:09.755 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:11.758 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:13.764 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:15.767 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:17.769 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:19.770 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:21.775 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:23.780 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:25.782 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:27.787 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:29.792 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:31.794 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:33.799 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:35.801 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:37.803 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:39.805 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:41.807 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:43.811 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:45.814 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:47.818 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:49.818 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:51.822 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:53.824 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:55.828 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:57.828 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:23:59.833 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:01.834 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:03.839 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:03.858 [main] DEBUG uc.seng301.asg3.order.Counter - new order placed
+13:24:03.887 [Thread-1] DEBUG uc.seng301.asg3.order.Counter - picked order
+13:24:03.890 [Thread-1] INFO  uc.seng301.asg3.order.Chocolatier - Starting to execute order
+13:24:03.891 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:05.840 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:05.894 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:07.844 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:07.898 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:09.847 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:09.902 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:11.850 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:11.906 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:13.854 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:13.908 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:15.859 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:15.914 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:17.864 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:17.916 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:19.866 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:19.919 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:21.870 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:21.920 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:23.873 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:23.925 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:25.875 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:25.925 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:27.876 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:27.930 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:29.881 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:29.931 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:31.884 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:31.936 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:33.889 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:33.939 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:35.890 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:35.943 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:37.892 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:37.947 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:39.893 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:39.948 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:41.898 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:41.950 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:43.901 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:43.953 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:45.908 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:45.957 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:47.912 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:47.961 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:49.915 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:49.967 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:51.917 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:51.969 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:53.919 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:53.973 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:55.923 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:55.977 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:57.928 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:57.979 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:24:59.933 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:24:59.981 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:01.937 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:01.983 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:03.941 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:03.985 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:05.944 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:05.989 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:07.947 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:07.990 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:09.952 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:09.995 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:11.957 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:12.000 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:13.958 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:14.005 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:15.962 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:16.009 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:17.963 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:18.013 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:19.968 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:20.014 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:21.973 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:22.018 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:23.975 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:24.020 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:25.976 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:26.025 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:27.979 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:28.031 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:29.983 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:30.034 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:31.985 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:32.039 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:33.986 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:34.045 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:35.990 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:36.050 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:37.993 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:38.055 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:39.996 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:40.057 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:42.001 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:42.062 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:44.004 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:44.066 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:46.010 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:46.071 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:48.015 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:48.076 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:50.021 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:50.079 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:52.025 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:52.084 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:54.031 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:54.090 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:56.036 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:56.092 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:25:58.042 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:25:58.096 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:00.047 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:00.102 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:02.047 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:02.103 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:04.048 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:04.105 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:06.049 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:06.110 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:08.055 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:08.113 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:10.055 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:10.116 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:12.058 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:12.121 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:14.062 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:14.123 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:16.064 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:16.127 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:18.066 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:18.132 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:20.067 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:20.136 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:22.072 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:22.141 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:24.073 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:24.147 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:26.078 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:26.151 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:28.083 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:28.155 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:30.084 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:30.156 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:32.089 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:32.157 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:34.094 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:34.158 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:36.097 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:36.159 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:38.097 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:38.163 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:40.102 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:40.165 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:42.106 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:42.169 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:44.112 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:44.170 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:46.116 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:46.174 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:48.122 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:48.177 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:50.125 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:50.182 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:52.130 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:52.183 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:54.132 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:54.187 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:56.137 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:56.189 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:26:58.142 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:26:58.191 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:00.147 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:00.197 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:02.150 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:02.200 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:04.154 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:04.205 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:06.157 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:06.205 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:08.158 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:08.211 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:10.161 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:10.212 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:12.162 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:12.216 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:14.167 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:14.219 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:16.171 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:16.220 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:27:18.175 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:20.179 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:22.183 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:24.189 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:26.192 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:28.194 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:30.198 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:32.203 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:34.208 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:36.210 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:38.213 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:40.214 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:42.218 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:44.223 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:46.229 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:48.232 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:50.237 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:52.244 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:54.249 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:56.254 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:27:58.260 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:00.265 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:02.268 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:04.269 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:06.273 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:08.273 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:10.274 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:12.278 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:14.280 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:16.284 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:18.289 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:20.294 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:22.300 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:24.305 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:26.310 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:28.314 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:30.319 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:32.319 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:34.325 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:36.330 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:38.335 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:40.339 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:42.342 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:44.344 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:46.353 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:48.357 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:50.359 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:52.367 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:54.371 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:56.373 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:28:58.377 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:00.380 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:02.381 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:04.384 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:06.385 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:08.389 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:10.393 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:12.396 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:14.400 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:16.404 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:18.409 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:20.412 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:22.415 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:24.418 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:26.420 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:28.426 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:30.427 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:32.429 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:34.431 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:36.434 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:38.437 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:40.437 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:42.442 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:43.696 [main] DEBUG uc.seng301.asg3.order.Counter - new order placed
+13:29:43.699 [Thread-1] DEBUG uc.seng301.asg3.order.Counter - picked order
+13:29:43.700 [Thread-1] INFO  uc.seng301.asg3.order.Chocolatier - Starting to execute order
+13:29:43.700 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:29:43.711 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type WHITE without alcohol
+13:29:43.713 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:29:43.713 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:29:44.443 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:44.526 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:29:44.527 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:29:44.944 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:29:44.944 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:29:45.372 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a WHITE hollow egg without alcohol
+13:29:45.373 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type CRUNCHY without alcohol
+13:29:45.469 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:29:45.470 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:29:45.705 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:29:46.227 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:29:46.228 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:29:46.448 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:46.554 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:29:46.555 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:29:47.185 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:29:47.185 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type DARK without alcohol
+13:29:47.219 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a CRUNCHY hollow egg without alcohol
+13:29:47.220 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type MILK without alcohol
+13:29:47.707 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:29:47.725 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:29:47.726 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:29:47.837 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a MILK stuffed egg without alcohol
+13:29:47.838 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type DARK without alcohol
+13:29:48.381 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:29:48.381 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:29:48.453 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:48.828 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a DARK hollow egg without alcohol
+13:29:48.828 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:29:49.176 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:29:49.177 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type DARK without alcohol
+13:29:49.350 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:29:49.350 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type DARK without alcohol
+13:29:49.513 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a DARK hollow egg without alcohol
+13:29:49.513 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory HollowEggFactory of type WHITE without alcohol
+13:29:49.525 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a WHITE hollow egg without alcohol
+13:29:49.525 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type WHITE without alcohol
+13:29:49.711 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 0 eggs
+13:29:50.330 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.HollowEggFactory - create a DARK hollow egg without alcohol
+13:29:50.330 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - produce egg with factory StuffedEggFactory of type CRUNCHY without alcohol
+13:29:50.459 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:51.073 [pool-2-thread-2] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a CRUNCHY stuffed egg without alcohol
+13:29:51.075 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.075 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:29:51.076 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.076 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:29:51.077 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.077 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:29:51.077 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.077 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:29:51.077 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.077 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:29:51.077 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.078 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:29:51.078 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.078 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:29:51.078 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.079 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:29:51.079 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.079 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:29:51.079 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.080 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - MILK egg has been produced.
+13:29:51.080 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.080 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:29:51.080 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.080 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:29:51.080 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.081 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:29:51.081 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.081 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:29:51.081 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.081 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:29:51.081 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.081 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:29:51.082 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.082 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:29:51.082 [pool-2-thread-2] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.082 [pool-2-thread-2] INFO  uc.seng301.asg3.order.PreparingOrder - CRUNCHY egg has been produced.
+13:29:51.089 [pool-2-thread-3] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a WHITE stuffed egg without alcohol
+13:29:51.089 [pool-2-thread-3] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.090 [pool-2-thread-3] INFO  uc.seng301.asg3.order.PreparingOrder - WHITE egg has been produced.
+13:29:51.300 [pool-2-thread-1] DEBUG uc.seng301.asg3.egg.StuffedEggFactory - create a DARK stuffed egg without alcohol
+13:29:51.300 [pool-2-thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - add egg to package
+13:29:51.300 [pool-2-thread-1] INFO  uc.seng301.asg3.order.PreparingOrder - DARK egg has been produced.
+13:29:51.715 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:29:51.715 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:29:52.462 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:54.464 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:56.468 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:29:58.468 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:00.473 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:02.478 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:04.483 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:06.487 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:08.492 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:10.497 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:12.501 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:13.721 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - exiting
+13:30:13.723 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:30:13.724 [Thread-1] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 20 eggs
+13:30:14.503 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:16.507 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:18.508 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:20.512 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:22.513 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:24.518 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:26.522 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:28.526 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:30.527 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:32.529 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:34.532 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:36.535 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:38.535 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:40.540 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:42.544 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:44.549 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:46.554 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:48.555 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:50.561 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:52.563 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:54.565 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:56.570 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:30:58.575 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:00.580 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:02.584 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:04.588 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:06.590 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:08.591 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:10.595 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:12.601 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:14.606 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:16.609 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:18.615 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:20.619 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:22.624 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:24.630 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:26.636 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:28.638 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:30.643 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:32.645 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:34.646 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:36.649 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:38.653 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:40.658 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:42.663 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:44.667 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:46.671 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:48.676 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:50.677 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:52.679 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:54.679 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:56.684 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:31:58.685 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:00.686 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:02.692 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:04.697 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:06.701 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:08.702 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:10.703 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:12.706 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:14.707 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:16.712 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:18.717 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:20.722 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:22.724 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:24.727 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:26.728 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:28.733 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:30.738 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:32.741 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:34.747 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:36.749 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:38.753 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:40.757 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:42.762 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:44.765 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:46.766 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:48.768 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:50.769 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:52.774 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:54.776 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:56.777 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:32:58.781 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:00.786 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:02.790 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:04.794 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:06.798 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:08.801 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:10.804 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:12.805 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:14.810 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
+13:33:16.813 [main] DEBUG uc.seng301.asg3.order.PreparingOrder - packaging contains 15 eggs
