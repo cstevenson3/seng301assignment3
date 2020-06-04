@@ -34,6 +34,7 @@ import uc.seng301.asg3.egg.StuffedEggFactory;
 import uc.seng301.asg3.ingredient.Filling;
 import uc.seng301.asg3.order.Chocolatier;
 import uc.seng301.asg3.order.Counter;
+import uc.seng301.asg3.order.Order;
 import uc.seng301.asg3.order.PreparingOrder;
 import uc.seng301.asg3.packaging.Packaging;
 import uc.seng301.asg3.packaging.PackagingType;
@@ -64,7 +65,12 @@ public class App {
    * @param packaging the packaging to check
    * @return true if identical eggs are not next to each other
    */
-  static boolean isPackageDistributedSuitably(Packaging packaging) {
+  static boolean isPackageDistributedSuitably(PreparingOrder order) {
+    Packaging packaging = order.getPackaging();
+    if(!order.isStuffed() && !PackagingType.isMixedPackaging(packaging.getPackagingType())) {
+      // then distributing is impossible
+      return true;
+    }
     List<ChocolateEgg> eggs;
     if(PackagingType.isHollowEggPackaging(packaging.getPackagingType())) {
       eggs = packaging.getEggs().get(0).getContent();
@@ -143,7 +149,7 @@ public class App {
       logger.error("Interrupted while busy waiting...", e);
     }
     
-    while(!isPackageDistributedSuitably(order.getPackaging())) {
+    while(!isPackageDistributedSuitably(order)) {
       if(PackagingType.isHollowEggPackaging(order.getPackaging().getPackagingType())) {
         Collections.shuffle(order.getPackaging().getEggs().get(0).getContent());
       } else {

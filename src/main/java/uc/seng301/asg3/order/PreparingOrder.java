@@ -76,70 +76,92 @@ public class PreparingOrder extends Order {
   @Override
   public void prepare() {
     executor = Executors.newFixedThreadPool(3);
-    if (PackagingType.isHollowEggPackaging(packagingType) && chocolateType == ChocolateType.CRUNCHY) {
-      packaging.addChocolateEgg(produceEgg(hollowEggFactory, ChocolateType.WHITE, false));
+    if (PackagingType.isHollowEggPackaging(packagingType)) {
+      ChocolateType outerEggType = null;
+      if(PackagingType.isMixedPackaging(packagingType)) {
+        outerEggType = ChocolateType.MILK;
+      } else {
+        if(chocolateType == ChocolateType.CRUNCHY) {
+          outerEggType = ChocolateType.WHITE;
+        } else {
+          outerEggType = chocolateType;
+        }
+      }
+      packaging.addChocolateEgg(produceEgg(hollowEggFactory, outerEggType, false));
     }
     
     // generate balancing requirements
     ArrayList<ChocolateType> chocolateTypesToUse = new ArrayList<ChocolateType>();
-    ChocolateType[] availableChocolateTypesUnfiltered = ChocolateType.values();
-    ArrayList<ChocolateType> availableChocolateTypes = new ArrayList<ChocolateType>();
-    
-    // put crunchy first
-    availableChocolateTypes.add(ChocolateType.CRUNCHY);
-    for(int ctu = 0; ctu < availableChocolateTypesUnfiltered.length; ctu++) {
-      if(availableChocolateTypesUnfiltered[ctu] != ChocolateType.CRUNCHY) {
-        availableChocolateTypes.add(availableChocolateTypesUnfiltered[ctu]);
+    if(!PackagingType.isMixedPackaging(packagingType)) {
+      for(int i = 0; i < quantity; i++) {
+        chocolateTypesToUse.add(chocolateType);
       }
-    }
-    int quantityRemaining = quantity;
-    int numChocTypesRemaining = availableChocolateTypes.size();
-    for(int c = 0; c < availableChocolateTypes.size(); c++) {
-      float approxChocTypeQuantity;
-      int chocTypeQuantity;
-      if(availableChocolateTypes.get(c) == ChocolateType.CRUNCHY) {
-        approxChocTypeQuantity = ((float)quantityRemaining) * 0.1F;
-        chocTypeQuantity = (int) Math.floor(approxChocTypeQuantity);
-      } else {
-        approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
-        chocTypeQuantity = Math.round(approxChocTypeQuantity);
-      }
+    } else {
+      ChocolateType[] availableChocolateTypesUnfiltered = ChocolateType.values();
+      ArrayList<ChocolateType> availableChocolateTypes = new ArrayList<ChocolateType>();
       
-      // add this many to chocolateTypesToUse
-      for(int ct = 0; ct < chocTypeQuantity; ct++) {
-        chocolateTypesToUse.add(availableChocolateTypes.get(c));
+      // put crunchy first
+      availableChocolateTypes.add(ChocolateType.CRUNCHY);
+      for(int ctu = 0; ctu < availableChocolateTypesUnfiltered.length; ctu++) {
+        if(availableChocolateTypesUnfiltered[ctu] != ChocolateType.CRUNCHY) {
+          availableChocolateTypes.add(availableChocolateTypesUnfiltered[ctu]);
+        }
       }
-      quantityRemaining -= chocTypeQuantity;
-      numChocTypesRemaining -= 1;
+      int quantityRemaining = quantity;
+      int numChocTypesRemaining = availableChocolateTypes.size();
+      for(int c = 0; c < availableChocolateTypes.size(); c++) {
+        float approxChocTypeQuantity;
+        int chocTypeQuantity;
+        if(availableChocolateTypes.get(c) == ChocolateType.CRUNCHY) {
+          approxChocTypeQuantity = ((float)quantityRemaining) * 0.1F;
+          chocTypeQuantity = (int) Math.floor(approxChocTypeQuantity);
+        } else {
+          approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
+          chocTypeQuantity = Math.round(approxChocTypeQuantity);
+        }
+        
+        // add this many to chocolateTypesToUse
+        for(int ct = 0; ct < chocTypeQuantity; ct++) {
+          chocolateTypesToUse.add(availableChocolateTypes.get(c));
+        }
+        quantityRemaining -= chocTypeQuantity;
+        numChocTypesRemaining -= 1;
+      }
     }
     
     ArrayList<Filling> fillingsToUse = new ArrayList<Filling>();
-    List<Filling> unfilteredAvailableFillings = stuffedEggFactory.getFillings();
-    List<Filling> availableFillings = new ArrayList<Filling>();
-    availableFillings.add(null); // null will represent hollow eggs
-    for(Filling fill : unfilteredAvailableFillings) {
-      if(!(fill.containsAlcohol() && !containsAlcohol)) {
-        availableFillings.add(fill);
+    if(!stuffed) {
+      for(int i = 0; i < quantity; i++) {
+        fillingsToUse.add(null);
       }
-    }
-    quantityRemaining = quantity;
-    int numFillingsRemaining = availableFillings.size();
-    for(int f = 0; f < availableFillings.size(); f++) {
-      float approxFillingQuantity;
-      int fillingQuantity;
-      if(PackagingType.isHollowEggPackaging(packagingType) && availableFillings.get(f) == null) {
-        approxFillingQuantity = ((float)quantityRemaining + 1) * 0.3F - 1;
-        fillingQuantity = (int)Math.floor(approxFillingQuantity);
-      } else {
-        approxFillingQuantity = ((float)(quantityRemaining)) / ((float)numFillingsRemaining);
-        fillingQuantity = Math.round(approxFillingQuantity);
+    } else {
+      List<Filling> unfilteredAvailableFillings = stuffedEggFactory.getFillings();
+      List<Filling> availableFillings = new ArrayList<Filling>();
+      availableFillings.add(null); // null will represent hollow eggs
+      for(Filling fill : unfilteredAvailableFillings) {
+        if(!(fill.containsAlcohol() && !containsAlcohol)) {
+          availableFillings.add(fill);
+        }
       }
-      // add this many to fillingsToUse
-      for(int ct = 0; ct < fillingQuantity; ct++) {
-        fillingsToUse.add(availableFillings.get(f));
+      int quantityRemaining = quantity;
+      int numFillingsRemaining = availableFillings.size();
+      for(int f = 0; f < availableFillings.size(); f++) {
+        float approxFillingQuantity;
+        int fillingQuantity;
+        if(PackagingType.isHollowEggPackaging(packagingType) && availableFillings.get(f) == null) {
+          approxFillingQuantity = ((float)quantityRemaining + 1) * 0.3F - 1;
+          fillingQuantity = (int)Math.floor(approxFillingQuantity);
+        } else {
+          approxFillingQuantity = ((float)(quantityRemaining)) / ((float)numFillingsRemaining);
+          fillingQuantity = Math.round(approxFillingQuantity);
+        }
+        // add this many to fillingsToUse
+        for(int ct = 0; ct < fillingQuantity; ct++) {
+          fillingsToUse.add(availableFillings.get(f));
+        }
+        quantityRemaining -= fillingQuantity;
+        numFillingsRemaining -= 1;
       }
-      quantityRemaining -= fillingQuantity;
-      numFillingsRemaining -= 1;
     }
     
     // shuffle so different choc types end up with different fillings
@@ -289,5 +311,13 @@ public class PreparingOrder extends Order {
    */
   private boolean withAlcohol(boolean containsAlcohol) {
     return ThreadLocalRandom.current().nextInt() % 2 == 0 && containsAlcohol;
+  }
+
+  /**
+   * Does this order allow stuffed eggs?
+   * @return true if yes, otherwise false
+   */
+  public boolean isStuffed() {
+    return stuffed;
   }
 }

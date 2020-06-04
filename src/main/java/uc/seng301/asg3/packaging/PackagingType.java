@@ -104,5 +104,10 @@ public enum PackagingType {
         || packagingType.equals(PackagingType.MIXED_HOLLOW_EGG);
   }
 
+  public static boolean isMixedPackaging(PackagingType packagingType) {
+    return packagingType.equals(PackagingType.MIXED_BOX)
+        || packagingType.equals(PackagingType.MIXED_HOLLOW_EGG);
+  }
+
 
 }
