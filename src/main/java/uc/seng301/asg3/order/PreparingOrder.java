@@ -76,8 +76,8 @@ public class PreparingOrder extends Order {
   @Override
   public void prepare() {
     executor = Executors.newFixedThreadPool(3);
-    if (PackagingType.isHollowEggPackaging(packagingType)) {
-      packaging.addChocolateEgg(produceEgg(hollowEggFactory, ChocolateType.MILK, false));
+    if (PackagingType.isHollowEggPackaging(packagingType) && chocolateType == ChocolateType.CRUNCHY) {
+      packaging.addChocolateEgg(produceEgg(hollowEggFactory, ChocolateType.WHITE, false));
     }
     
     // generate balancing requirements
