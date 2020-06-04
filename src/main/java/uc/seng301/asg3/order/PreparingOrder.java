@@ -30,6 +30,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import uc.seng301.asg3.balancing.Balancer;
 import uc.seng301.asg3.balancing.selecting.Selection;
 import uc.seng301.asg3.balancing.selecting.SelectionDirector;
 import uc.seng301.asg3.egg.ChocolateEgg;
@@ -80,8 +81,8 @@ public class PreparingOrder extends Order {
   public void prepare() {
     executor = Executors.newFixedThreadPool(3);
     
-    SelectionDirector selectionDirector = new SelectionDirector(this, stuffedEggFactory.getFillings());
-    Selection selection = selectionDirector.construct();
+    Balancer balancer = new Balancer();
+    Selection selection = balancer.getSelection(this, stuffedEggFactory.getFillings());
     
     if(selection.isOuterEgg()) {
       packaging.addChocolateEgg(produceEgg(hollowEggFactory, selection.getOuterEggType(), false));

@@ -8,14 +8,25 @@ import uc.seng301.asg3.packaging.PackagingType;
 
 public class SelectionDirector {
   
+  // order to balance for
   private PreparingOrder order;
+  // available fillings
   private List<Filling> fillings;
   
+  /**
+   * Construct a SelectionDirector for this context
+   * @param order order to balance for
+   * @param fillings all available fillings
+   */
   public SelectionDirector(PreparingOrder order, List<Filling> fillings) {
     this.order = order;
     this.fillings = fillings;
   }
   
+  /**
+   * Construct a balanced selection of eggs based on the order provided
+   * @return A balanced selection of eggs
+   */
   public Selection construct() {
     SelectionBuilder builder = new SelectionBuilder(order, fillings);
     

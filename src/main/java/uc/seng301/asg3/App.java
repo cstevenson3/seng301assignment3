@@ -109,7 +109,6 @@ public class App {
     }
     
     Balancer balancer = new Balancer();
-    
     balancer.rearrangePackaging(order);
 
     System.out.println(order.getPackaging());
