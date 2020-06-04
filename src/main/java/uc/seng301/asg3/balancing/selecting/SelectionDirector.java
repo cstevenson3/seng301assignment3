@@ -6,6 +6,13 @@ import uc.seng301.asg3.ingredient.Filling;
 import uc.seng301.asg3.order.PreparingOrder;
 import uc.seng301.asg3.packaging.PackagingType;
 
+/**
+ * This is a part of the builder pattern. It directs the building by interpreting an order,
+ * and converting it into build requirements (enacted by calling methods on SelectionBuilder).
+ * Is also used in the facade pattern, as its methods are only ever used by the Builder facade
+ * @author Cameron Stevenson
+ *
+ */
 public class SelectionDirector {
   
   // order to balance for

@@ -8,6 +8,12 @@ import uc.seng301.asg3.egg.ChocolateType;
 import uc.seng301.asg3.ingredient.Filling;
 import uc.seng301.asg3.order.PreparingOrder;
 
+/**
+ * This is a part of the builder pattern. It is used to accumulate requirements for the selection, 
+ * and then build a Selection with those requirements
+ * @author Cameron Stevenson
+ *
+ */
 public class SelectionBuilder {
   // quantity of eggs
   private int quantity;

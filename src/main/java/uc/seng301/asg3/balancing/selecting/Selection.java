@@ -6,7 +6,8 @@ import uc.seng301.asg3.egg.ChocolateType;
 import uc.seng301.asg3.ingredient.Filling;
 
 /**
- * Represents a selection of chocolate types and fillings to use in a packaging
+ * This is a part of the builder pattern. Represents a selection of chocolate types 
+ * and fillings to use in a packaging. Is built by SelectionBuilder
  * @author Cameron Stevenson
  *
  */

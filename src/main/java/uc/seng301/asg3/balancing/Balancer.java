@@ -9,7 +9,7 @@ import uc.seng301.asg3.ingredient.Filling;
 import uc.seng301.asg3.order.PreparingOrder;
 
 /**
- * Provides a facade for packages related to balancing a packaging
+ * This is a part of the facade pattern. Provides a facade for packages related to balancing a packaging
  * @author Cameron Stevenson
  *
  */

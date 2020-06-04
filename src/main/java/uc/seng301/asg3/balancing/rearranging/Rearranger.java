@@ -11,7 +11,8 @@ import uc.seng301.asg3.packaging.Packaging;
 import uc.seng301.asg3.packaging.PackagingType;
 
 /**
- * Provides methods related to rearranging the eggs in a packaging
+ * This is a part of the facade pattern. Through Balancer it provides methods 
+ * related to rearranging the eggs in a packaging
  * @author Cameron Stevenson
  *
  */
