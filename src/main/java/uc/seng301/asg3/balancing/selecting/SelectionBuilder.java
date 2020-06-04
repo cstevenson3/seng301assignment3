@@ -6,9 +6,7 @@ import java.util.List;
 
 import uc.seng301.asg3.egg.ChocolateType;
 import uc.seng301.asg3.ingredient.Filling;
-import uc.seng301.asg3.order.Order;
 import uc.seng301.asg3.order.PreparingOrder;
-import uc.seng301.asg3.packaging.PackagingType;
 
 public class SelectionBuilder {
   // quantity of eggs
@@ -47,7 +45,7 @@ public class SelectionBuilder {
   
   public SelectionBuilder(PreparingOrder order, List<Filling> fillings) {
     quantity = order.getQuantity();
-    stuffed = PackagingType.isMixedPackaging(order.getPackagingType());
+    stuffed = order.isStuffed();
     containsAlcohol = order.containsAlcohol();
     this.fillings = fillings;
   }
@@ -130,12 +128,12 @@ public class SelectionBuilder {
     if (outerEgg) {
       ChocolateType outerEggType = null;
       if(oneChocolateType) {
-        if(chocolateType == ChocolateType.CRUNCHY) {
+        if(outerEggWhiteIfCrunchy && chocolateType == ChocolateType.CRUNCHY) {
           outerEggType = ChocolateType.WHITE;
         } else {
           outerEggType = chocolateType;
         }
-      } else {
+      } else if (outerEggNotCrunchy) {
         outerEggType = ChocolateType.MILK;
       }
       selection.setOuterEgg(true);
@@ -165,7 +163,7 @@ public class SelectionBuilder {
         float approxChocTypeQuantity;
         int chocTypeQuantity;
         if(limitCrunchy && availableChocolateTypes.get(c) == ChocolateType.CRUNCHY) {
-          approxChocTypeQuantity = ((float)quantityRemaining) * 0.1F;
+          approxChocTypeQuantity = ((float)quantityRemaining) * maxProportionCrunchy;
           chocTypeQuantity = (int) Math.floor(approxChocTypeQuantity);
         } else {
           approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
@@ -200,8 +198,8 @@ public class SelectionBuilder {
       for(int f = 0; f < availableFillings.size(); f++) {
         float approxFillingQuantity;
         int fillingQuantity;
-        if(outerEgg && availableFillings.get(f) == null) {
-          approxFillingQuantity = ((float)quantityRemaining + 1) * 0.3F - 1;
+        if(limitProportionHollow && availableFillings.get(f) == null) {
+          approxFillingQuantity = ((float)quantityRemaining + 1) * maxProportionHollow - 1;
           fillingQuantity = (int)Math.floor(approxFillingQuantity);
         } else {
           approxFillingQuantity = ((float)(quantityRemaining)) / ((float)numFillingsRemaining);
