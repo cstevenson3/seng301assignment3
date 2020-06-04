@@ -29,6 +29,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import uc.seng301.asg3.balancing.selecting.Selection;
+import uc.seng301.asg3.balancing.selecting.SelectionDirector;
 import uc.seng301.asg3.egg.ChocolateEgg;
 import uc.seng301.asg3.egg.ChocolateEggFactory;
 import uc.seng301.asg3.egg.ChocolateType;
@@ -76,101 +79,17 @@ public class PreparingOrder extends Order {
   @Override
   public void prepare() {
     executor = Executors.newFixedThreadPool(3);
-    if (PackagingType.isHollowEggPackaging(packagingType)) {
-      ChocolateType outerEggType = null;
-      if(PackagingType.isMixedPackaging(packagingType)) {
-        outerEggType = ChocolateType.MILK;
-      } else {
-        if(chocolateType == ChocolateType.CRUNCHY) {
-          outerEggType = ChocolateType.WHITE;
-        } else {
-          outerEggType = chocolateType;
-        }
-      }
-      packaging.addChocolateEgg(produceEgg(hollowEggFactory, outerEggType, false));
-    }
     
-    // generate balancing requirements
-    ArrayList<ChocolateType> chocolateTypesToUse = new ArrayList<ChocolateType>();
-    if(!PackagingType.isMixedPackaging(packagingType)) {
-      for(int i = 0; i < quantity; i++) {
-        chocolateTypesToUse.add(chocolateType);
-      }
-    } else {
-      ChocolateType[] availableChocolateTypesUnfiltered = ChocolateType.values();
-      ArrayList<ChocolateType> availableChocolateTypes = new ArrayList<ChocolateType>();
-      
-      // put crunchy first
-      availableChocolateTypes.add(ChocolateType.CRUNCHY);
-      for(int ctu = 0; ctu < availableChocolateTypesUnfiltered.length; ctu++) {
-        if(availableChocolateTypesUnfiltered[ctu] != ChocolateType.CRUNCHY) {
-          availableChocolateTypes.add(availableChocolateTypesUnfiltered[ctu]);
-        }
-      }
-      int quantityRemaining = quantity;
-      int numChocTypesRemaining = availableChocolateTypes.size();
-      for(int c = 0; c < availableChocolateTypes.size(); c++) {
-        float approxChocTypeQuantity;
-        int chocTypeQuantity;
-        if(availableChocolateTypes.get(c) == ChocolateType.CRUNCHY) {
-          approxChocTypeQuantity = ((float)quantityRemaining) * 0.1F;
-          chocTypeQuantity = (int) Math.floor(approxChocTypeQuantity);
-        } else {
-          approxChocTypeQuantity = ((float)quantityRemaining) / ((float)numChocTypesRemaining);
-          chocTypeQuantity = Math.round(approxChocTypeQuantity);
-        }
-        
-        // add this many to chocolateTypesToUse
-        for(int ct = 0; ct < chocTypeQuantity; ct++) {
-          chocolateTypesToUse.add(availableChocolateTypes.get(c));
-        }
-        quantityRemaining -= chocTypeQuantity;
-        numChocTypesRemaining -= 1;
-      }
-    }
+    SelectionDirector selectionDirector = new SelectionDirector(this, stuffedEggFactory.getFillings());
+    Selection selection = selectionDirector.construct();
     
-    ArrayList<Filling> fillingsToUse = new ArrayList<Filling>();
-    if(!stuffed) {
-      for(int i = 0; i < quantity; i++) {
-        fillingsToUse.add(null);
-      }
-    } else {
-      List<Filling> unfilteredAvailableFillings = stuffedEggFactory.getFillings();
-      List<Filling> availableFillings = new ArrayList<Filling>();
-      availableFillings.add(null); // null will represent hollow eggs
-      for(Filling fill : unfilteredAvailableFillings) {
-        if(!(fill.containsAlcohol() && !containsAlcohol)) {
-          availableFillings.add(fill);
-        }
-      }
-      int quantityRemaining = quantity;
-      int numFillingsRemaining = availableFillings.size();
-      for(int f = 0; f < availableFillings.size(); f++) {
-        float approxFillingQuantity;
-        int fillingQuantity;
-        if(PackagingType.isHollowEggPackaging(packagingType) && availableFillings.get(f) == null) {
-          approxFillingQuantity = ((float)quantityRemaining + 1) * 0.3F - 1;
-          fillingQuantity = (int)Math.floor(approxFillingQuantity);
-        } else {
-          approxFillingQuantity = ((float)(quantityRemaining)) / ((float)numFillingsRemaining);
-          fillingQuantity = Math.round(approxFillingQuantity);
-        }
-        // add this many to fillingsToUse
-        for(int ct = 0; ct < fillingQuantity; ct++) {
-          fillingsToUse.add(availableFillings.get(f));
-        }
-        quantityRemaining -= fillingQuantity;
-        numFillingsRemaining -= 1;
-      }
+    if(selection.isOuterEgg()) {
+      packaging.addChocolateEgg(produceEgg(hollowEggFactory, selection.getOuterEggType(), false));
     }
-    
-    // shuffle so different choc types end up with different fillings
-    Collections.shuffle(chocolateTypesToUse);
-    Collections.shuffle(fillingsToUse);
 
     for (int i = 0; i < quantity; i++) {
-      ChocolateType chocType = chocolateTypesToUse.get(i);
-      Filling filling = fillingsToUse.get(i);
+      ChocolateType chocType = selection.getChocolateTypes().get(i);
+      Filling filling = selection.getFillings().get(i);
       boolean hasAlcohol;
       
       ChocolateEggFactory eggFactory;
@@ -319,5 +238,37 @@ public class PreparingOrder extends Order {
    */
   public boolean isStuffed() {
     return stuffed;
+  }
+
+  /**
+   * Get the chocolate type of this order
+   * @return chocolate type
+   */
+  public ChocolateType getChocolateType() {
+    return chocolateType;
+  }
+
+  /**
+   * Get quantity of eggs in the order (excluding the outer egg)
+   * @return quantity
+   */
+  public int getQuantity() {
+    return quantity;
+  }
+
+  /**
+   * Can this order contain alcohol
+   * @return true or false
+   */
+  public boolean containsAlcohol() {
+    return containsAlcohol;
+  }
+
+  /**
+   * Get the packaging type of the order
+   * @return packaging type
+   */
+  public PackagingType getPackagingType() {
+    return packagingType;
   }
 }

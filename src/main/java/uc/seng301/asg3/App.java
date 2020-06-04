@@ -26,6 +26,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
+import uc.seng301.asg3.balancing.Balancer;
 import uc.seng301.asg3.egg.ChocolateEgg;
 import uc.seng301.asg3.egg.ChocolateType;
 import uc.seng301.asg3.egg.HollowEggFactory;
@@ -58,48 +59,6 @@ public class App {
 
   private App() {
     cli = new Scanner(System.in);
-  }
-  
-  /**
-   * Are identical eggs spread away from each other?
-   * @param packaging the packaging to check
-   * @return true if identical eggs are not next to each other
-   */
-  static boolean isPackageDistributedSuitably(PreparingOrder order) {
-    Packaging packaging = order.getPackaging();
-    if(!order.isStuffed() && !PackagingType.isMixedPackaging(packaging.getPackagingType())) {
-      // then distributing is impossible
-      return true;
-    }
-    List<ChocolateEgg> eggs;
-    if(PackagingType.isHollowEggPackaging(packaging.getPackagingType())) {
-      eggs = packaging.getEggs().get(0).getContent();
-    } else {
-      eggs = packaging.getEggs();
-    }
-    
-    for(int i = 0; i < eggs.size() - 1; i++) {
-      ChocolateEgg egg1 = eggs.get(i);
-      ChocolateEgg egg2 = eggs.get(i + 1);
-      boolean sameChocolateType = egg1.getChocolateType() == egg2.getChocolateType();
-      Filling filling1;
-      if(egg1 instanceof StuffedChocolateEgg) {
-        filling1 = ((StuffedChocolateEgg) egg1).getFilling();
-      } else {
-        filling1 = null;
-      }
-      Filling filling2;
-      if(egg2 instanceof StuffedChocolateEgg) {
-        filling2 = ((StuffedChocolateEgg) egg2).getFilling();
-      } else {
-        filling2 = null;
-      }
-      boolean sameFilling = filling1 == filling2;
-      if(sameChocolateType && sameFilling) {
-        return false;
-      }
-    }
-    return true;
   }
 
   /**
@@ -149,14 +108,9 @@ public class App {
       logger.error("Interrupted while busy waiting...", e);
     }
     
-    while(!isPackageDistributedSuitably(order)) {
-      if(PackagingType.isHollowEggPackaging(order.getPackaging().getPackagingType())) {
-        Collections.shuffle(order.getPackaging().getEggs().get(0).getContent());
-      } else {
-        Collections.shuffle(order.getPackaging().getEggs());
-      }
-    }
+    Balancer balancer = new Balancer();
     
+    balancer.rearrangePackaging(order);
 
     System.out.println(order.getPackaging());
     counter.stop();
